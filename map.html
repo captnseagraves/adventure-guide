@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Van Life Map</title>
+    <!-- jquery -->
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Google Maps API -->
+  <script
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsc_cF48KNOvMY1o6Qaxa4H7NcFL_sM8">
+   </script>
+   <!-- my js -->
+   <script type="text/javascript" src="app.js"></script>
+  <!-- bootstrap css -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- normalize-css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="new.js"></script> -->
+  </head>
+  <body >
+
+
+
+    <h3>The Van Life</h3>
+    <form class="" action="index.html" method="post">
+      <button type="button" class="btn btn-default mapBtns" aria-label="Left Align">Use Current Location
+</button>
+      <input type="text" name="zipCode" value="zipCode" placeholder="Enter Zip Code">
+      <button type="button" class="btn btn-default mapBtns" aria-label="Left Align">Search by Zip Code</button>
+    </form>
+       <div id="map"></div>
+
+  </body>
+</html>
