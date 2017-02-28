@@ -14,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- Google Maps API -->
   <script
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsc_cF48KNOvMY1o6Qaxa4H7NcFL_sM8">
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsc_cF48KNOvMY1o6Qaxa4H7NcFL_sM8&libraries=places">
    </script>
    <!-- my js -->
    <script type="text/javascript" src="app.js"></script>
@@ -31,13 +31,44 @@
 
 
     <h3>The Van Life</h3>
+
+
+<!-- User location and Zip code entry -->
     <form class="" action="index.html" method="post">
-      <button type="button" class="btn btn-default mapBtns" aria-label="Left Align">Use Current Location
+      <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='currLocBtn' >Use Current Location
 </button>
-      <input type="text" name="zipCode" value="zipCode" placeholder="Enter Zip Code">
-      <button type="button" class="btn btn-default mapBtns" aria-label="Left Align">Search by Zip Code</button>
+      <input type="text" name="zipCode" value="" placeholder="Enter City, State or Zip Code" id='zipInput'>
+      <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='zipBtn'>Search by Zip Code</button>
     </form>
+<!--  -->
+
+
+<!-- Google Place Search Box -->
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<!--  -->
+
+<!-- Google Place auotcomplete and directions -->
+    <!-- <input id="origin-input" class="controls" type="text"
+        placeholder="Enter an origin location">
+
+    <input id="destination-input" class="controls" type="text"
+        placeholder="Enter a destination location">
+
+    <div id="mode-selector" class="controls">
+      <input type="radio" name="type" id="changemode-walking" checked="checked">
+      <label for="changemode-walking">Walking</label>
+
+      <input type="radio" name="type" id="changemode-transit">
+      <label for="changemode-transit">Transit</label>
+
+      <input type="radio" name="type" id="changemode-driving">
+      <label for="changemode-driving">Driving</label>
+    </div> -->
+<!--  -->
+
+<!-- Map -->
        <div id="map"></div>
+<!--  -->
 
   </body>
 </html>
