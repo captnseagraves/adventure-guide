@@ -239,7 +239,8 @@ $(document).ready(function() {
                             var marker = new google.maps.Marker({
                                 position: latLng,
                                 map: map,
-                                title: (unit.FacilityName[0].toUpperCase()) + (unit.FacilityName.toLowerCase().slice(1))
+                                title: (unit.FacilityName[0].toUpperCase()) + (unit.FacilityName.toLowerCase().slice(1)),
+                                icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
                             });
                         }
                     }
@@ -251,32 +252,118 @@ $(document).ready(function() {
         }
 
 
-        if ($('#trails').prop('checked') === true) {
+        if ($('#mtnBiking').prop('checked') === true) {
             console.log($('#trails').prop('checked'));
             console.log('we here');
             console.log(userLocation);
             console.log(longitude, latitude);
             $.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/trails/USFS/?apikey=725A64096BA04570B60195D572ED5E38&latitude=${latitude}&longitude=${longitude}&radius=10`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=5&apikey=725A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
-                  console.log('success');
                     console.log(data);
-                    // let results = data.RECDATA;
-                    // for (var i = 0; i < results.length; i++) {
-                    //     for (let unit of results) {
-                    //         let lat = unit.FacilityLatitude;
-                    //         let lng = unit.FacilityLongitude;
-                    //         var latLng = new google.maps.LatLng(lat, lng);
-                    //         allLatlng.push(latLng);
-                    //         var marker = new google.maps.Marker({
-                    //             position: latLng,
-                    //             map: map,
-                    //             title: (unit.FacilityName[0].toUpperCase()) + (unit.FacilityName.toLowerCase().slice(1))
-                    //         });
-                    //     }
-                    // }
+                    let results = data.RECDATA;
+                    for (var i = 0; i < results.length; i++) {
+                        for (let unit of results) {
+                            let lat = unit.FacilityLatitude;
+                            let lng = unit.FacilityLongitude;
+                            var latLng = new google.maps.LatLng(lat, lng);
+                            allLatlng.push(latLng);
+                            let title = (unit.FacilityName[0].toUpperCase()) + (unit.FacilityName.toLowerCase().slice(1))
+                            let phone = unit.FacilityPhone ? unit.FacilityPhone : "No Phone Number Provided";
+                            // Create our info window content
+                            var infoWindowContent = '<div class="info_content">' +
+                                `<h3>${title}</h3>` 
+                                // `<p>Phone: ${phone}`
+                                '</div>';
+
+                            // Initialise the inforWindow
+                            var infoWindow = new google.maps.InfoWindow({
+                                content: infoWindowContent
+                            });
+
+                            var marker = new google.maps.Marker({
+                                position: latLng,
+                                map: map,
+                                title: title,
+                                icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+                            });
+
+                            // Display our info window when the marker is clicked
+                            (function(theMarker, theInfoWindow) {
+                                google.maps.event.addListener(marker, 'click', function() {
+                                    theInfoWindow.open(map, theMarker)
+                                });
+                                google.maps.event.addListener(map, "click", function() {
+                                    theInfoWindow.close();
+                                });
+                            })(marker, infoWindow);
+
+
+                        };
+                    }
+
+                },
+                error: function() {
+                    console.log('error')
+                },
+            })
+        }
+
+        if ($('#meteor').prop('checked') === true) {
+
+            $.ajax({
+                method: 'GET',
+                url: `https://data.nasa.gov/resource/y77d-th95.json`,
+                dataType: "JSON",
+                success: function(data) {
+                    for (let set of data) {
+
+                        let name = set.name;
+                        let mass = set.mass;
+                        let year = set.year ? set.year.substring(0, 4) : "No Year Data"
+                        let lat = set.reclat;
+                        let lng = set.reclong;
+
+                        var latLng = new google.maps.LatLng(lat, lng);
+
+                        allLatlng.push(latLng);
+
+                        let image = 'meteor.png';
+
+                        // Create our info window content
+                        var infoWindowContent = '<div class="info_content">' +
+                            `<h3>Meteor Name: ${name}</h3>` +
+                            `<p>Mass: ${mass}g </p>` +
+                            `<p>Year Meteor Fell: ${year} </p>` +
+                            '</div>';
+
+                        // Initialise the inforWindow
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: infoWindowContent
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: latLng,
+                            map: map,
+                            title: `Meteor name: ${name}`,
+                            icon: image
+                        });
+
+                        // Display our info window when the marker is clicked
+                        (function(theMarker, theInfoWindow) {
+                            google.maps.event.addListener(marker, 'click', function() {
+                                theInfoWindow.open(map, theMarker)
+                            });
+                            google.maps.event.addListener(map, "click", function() {
+                                theInfoWindow.close();
+                            });
+                        })(marker, infoWindow);
+
+
+                    }
+
                 },
                 error: function() {
                     console.log('error')
