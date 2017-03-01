@@ -55,6 +55,21 @@
   padding-top: 100px;
 }
 
+.equal {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.purp {
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  background-color: purple;
+  display: inline-block;
+position: relative;
+top: 3px;
+}
+
 
 
 /* copy pasted bootstrap code*/
@@ -344,4 +359,8 @@ body {
       .info_content{
         color: black;
         text-shadow: none;
+      }
+
+      #camping, #mtnBiking, #hiking, #climbing, #meteor {
+        margin-right: 5px;
       }
