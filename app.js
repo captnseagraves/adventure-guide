@@ -220,7 +220,7 @@ $(document).ready(function() {
 
         var latitude = userLocation.lat;
         var longitude = userLocation.lng;
-        var allLatlng = [];
+        var allLatLng = [];
         if ($('#camping').prop('checked') === true) {
             console.log($('#camping').prop('checked'));
             $.ajax({
@@ -235,7 +235,7 @@ $(document).ready(function() {
                             let lat = unit.FacilityLatitude;
                             let lng = unit.FacilityLongitude;
                             var latLng = new google.maps.LatLng(lat, lng);
-                            allLatlng.push(latLng);
+                            allLatLng.push(latLng);
                             var marker = new google.maps.Marker({
                                 position: latLng,
                                 map: map,
@@ -253,10 +253,6 @@ $(document).ready(function() {
 
 
         if ($('#mtnBiking').prop('checked') === true) {
-            console.log($('#trails').prop('checked'));
-            console.log('we here');
-            console.log(userLocation);
-            console.log(longitude, latitude);
             $.ajax({
                 method: 'GET',
                 url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=5&apikey=725A64096BA04570B60195D572ED5E38`,
@@ -269,14 +265,16 @@ $(document).ready(function() {
                             let lat = unit.FacilityLatitude;
                             let lng = unit.FacilityLongitude;
                             var latLng = new google.maps.LatLng(lat, lng);
-                            allLatlng.push(latLng);
-                            let title = (unit.FacilityName[0].toUpperCase()) + (unit.FacilityName.toLowerCase().slice(1))
+                            console.log(latLng);
+                            allLatLng.push(latLng);
+                            console.log(allLatLng);
+                            let title = toTitleCase(unit.FacilityName)
                             let phone = unit.FacilityPhone ? unit.FacilityPhone : "No Phone Number Provided";
                             // Create our info window content
                             var infoWindowContent = '<div class="info_content">' +
-                                `<h3>${title}</h3>` 
-                                // `<p>Phone: ${phone}`
-                                '</div>';
+                                `<h3>${title}</h3>`
+                            // `<p>Phone: ${phone}`
+                            '</div>';
 
                             // Initialise the inforWindow
                             var infoWindow = new google.maps.InfoWindow({
@@ -328,7 +326,7 @@ $(document).ready(function() {
 
                         var latLng = new google.maps.LatLng(lat, lng);
 
-                        allLatlng.push(latLng);
+                        allLatLng.push(latLng);
 
                         let image = 'meteor.png';
 
@@ -371,14 +369,16 @@ $(document).ready(function() {
             })
         }
 
-        // var bounds = new google.maps.LatLngBounds();
-        // //  Go through each...
-        // for (var i = 0, LtLgLen = allLatlng.length; i < LtLgLen; i++) {
-        //     //  And increase the bounds to take this point
-        //     bounds.extend(allLatlng[i]);
-        // }
-        // //  Fit these bounds to the map
-        // map.fitBounds(bounds);
+        var bounds = new google.maps.LatLngBounds();
+        console.log(allLatLng);
+        //  Go through each...
+        for (var i = 0; i < allLatLng.length; i++) {
+            //  And increase the bounds to take this point
+            console.log(allLatLng[i]);
+            bounds.extend(allLatLng[i]);
+        }
+        //  Fit these bounds to the map
+        map.fitBounds(bounds);
 
     }
 
@@ -430,6 +430,11 @@ $(document).ready(function() {
         })
     }
 
+    function toTitleCase(str) {
+        return str.replace(/\w\S*/g, function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    }
 
     //
 

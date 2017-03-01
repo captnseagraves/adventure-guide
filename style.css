@@ -55,6 +55,8 @@
   padding-top: 100px;
 }
 
+
+
 /* copy pasted bootstrap code*/
 
 /*
@@ -335,4 +337,11 @@ body {
         font-family: Roboto;
         font-size: 13px;
         font-weight: 300;
+      }
+
+      /* personal styles, cascaded*/
+
+      .info_content{
+        color: black;
+        text-shadow: none;
       }
