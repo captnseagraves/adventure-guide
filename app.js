@@ -266,7 +266,7 @@ $(document).ready(function() {
                             let lng = unit.FacilityLongitude;
                             var latLng = new google.maps.LatLng(lat, lng);
                             console.log(latLng);
-                            allLatLng.push(latLng);
+                            allLatLng.push([latLng.lat(), latLng.lng()]);
                             console.log(allLatLng);
                             let title = toTitleCase(unit.FacilityName)
                             let phone = unit.FacilityPhone ? unit.FacilityPhone : "No Phone Number Provided";
