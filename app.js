@@ -215,9 +215,8 @@ $(document).ready(function() {
     // Create markers
     //
     //
-
     const currentLocationMarkers = () => {
-
+      var range = $(':selected').val()
         var latitude = userLocation.lat;
         var longitude = userLocation.lng;
         var allLatLng = [];
@@ -225,7 +224,7 @@ $(document).ready(function() {
         if ($('#camping').prop('checked') === true) {
           deferred.push($.ajax({
               method: 'GET',
-              url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=9&apikey=725A64096BA04570B60195D572ED5E38`,
+              url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=9&apikey=725A64096BA04570B60195D572ED5E38`,
               dataType: "JSON",
               success: function(data) {
                   // console.log(data);
@@ -282,7 +281,7 @@ $(document).ready(function() {
         if ($('#mtnBiking').prop('checked') === true) {
             deferred.push($.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=5&apikey=725A64096BA04570B60195D572ED5E38`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=5&apikey=7${range}A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
                     // console.log(data);
@@ -338,7 +337,7 @@ $(document).ready(function() {
         if ($('#hiking').prop('checked') === true) {
             deferred.push($.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=14&apikey=725A64096BA04570B60195D572ED5E38`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=14&apikey=7${range}A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
                     // console.log(data);
@@ -394,7 +393,7 @@ $(document).ready(function() {
         if ($('#climbing').prop('checked') === true) {
             deferred.push($.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=7&apikey=725A64096BA04570B60195D572ED5E38`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=7&apikey=7${range}A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
                     // console.log(data);
@@ -529,7 +528,7 @@ const createBounds = (() => {
     const zipMarkers = () => {
 
         console.log(zipLocation);
-
+        var range = $(':selected').val()
         var latitude = zipLocation.lat;
         var longitude = zipLocation.lng;
         var allLatLng1 = [];
@@ -537,7 +536,7 @@ const createBounds = (() => {
         if ($('#camping').prop('checked') === true) {
           deferred1.push($.ajax({
               method: 'GET',
-              url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=9&apikey=725A64096BA04570B60195D572ED5E38`,
+              url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=9&apikey=7${range}A64096BA04570B60195D572ED5E38`,
               dataType: "JSON",
               success: function(data) {
                   // console.log(data);
@@ -594,7 +593,7 @@ const createBounds = (() => {
         if ($('#mtnBiking').prop('checked') === true) {
             deferred1.push($.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=5&apikey=725A64096BA04570B60195D572ED5E38`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=5&apikey=7${range}A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
                     // console.log(data);
@@ -650,7 +649,7 @@ const createBounds = (() => {
         if ($('#hiking').prop('checked') === true) {
             deferred1.push($.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=14&apikey=725A64096BA04570B60195D572ED5E38`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=14&apikey=7${range}A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
                     // console.log(data);
@@ -706,7 +705,7 @@ const createBounds = (() => {
         if ($('#climbing').prop('checked') === true) {
             deferred1.push($.ajax({
                 method: 'GET',
-                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=25&activity=7&apikey=725A64096BA04570B60195D572ED5E38`,
+                url: `https://ridb.recreation.gov/api/v1/facilities?latitude=${latitude}&longitude=${longitude}&radius=${range}&activity=7&apikey=7${range}A64096BA04570B60195D572ED5E38`,
                 dataType: "JSON",
                 success: function(data) {
                     // console.log(data);

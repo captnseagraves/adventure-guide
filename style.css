@@ -1,6 +1,6 @@
 #map {
-      height: 75%;
-      width: 95%;
+      height: 200px;
+      width: 200px;
       margin:auto;
       /*margin-bottom: 20px;*/
      }
@@ -100,10 +100,15 @@ a:hover {
  * Base structure
  */
 
+
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #090412;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+
+
+
 }
 body {
   color: #fff;
@@ -363,4 +368,11 @@ body {
 
       #camping, #mtnBiking, #hiking, #climbing, #meteor {
         margin-right: 5px;
+      }
+      select {
+        color: black;
+      }
+
+      .theRow {
+        height: 90%;
       }
