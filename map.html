@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Van Life Map</title>
+    <title>Adventure Guide Map</title>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- bootstrap js -->
@@ -19,147 +19,89 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- normalize-css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-    <!-- my css -->
-    <link rel="stylesheet" href="style.css">
+    <!--  -->
+
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">    <!-- my css -->
+    <link rel="stylesheet" href="map.css">
     <!-- <script src="new.js"></script> -->
 </head>
 
 <body>
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-    <h3>The Van Life</h3>
+<div class="container-fluid">
 
 
+
+    <div class='row'>
+        <div class='col-lg-12 head'>
+            <div class="masthead">
+                <!-- <div class="inner"> -->
+                    <h3 class="masthead-brand AG"><a href="index.html">Adventure Guide</a></h3>
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
     <!-- User location and Zip code entry -->
-<div class="col-lg-12">
-  <div class="row theRow">
-
-    <div class="col-lg-3">
     <div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='currLocBtn'>Use Current Location
-        </button>
-            </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Enter City, State or Zip Code" id='zipInput'>
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Search by Zip Code</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-    <form class="" action="index.html" method="post">
-        <!-- <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='currLocBtn'>Use Current Location
-        </button> -->
-        <!-- <input type="text" name="zipCode" value="" placeholder="Enter City, State or Zip Code" id='zipInput'> -->
-        <!-- <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='zipBtn'>Search by Zip Code</button><br> -->
-        <label for="distance">Search Radius:</label>
-      <select name="distance">
-        <option value="10">10 Miles</option>
-        <option value="25" selected>25 Miles</option>
-        <option value="50">50 Miles</option>
-        <option value="100">100 Miles</option>
-    </select><br><br>
-        <div class="purp"></div><label class='equal'>=</label><input id='camping' type="checkbox" name="" value=""><label>Camping</label>
-        <input id='hiking' type="checkbox" name="" value="" checked><label>Hiking</label>
-        <input id='mtnBiking' type="checkbox" name="" value="" checked><label>Mountain Biking</label>
-        <input id='climbing' type="checkbox" name="" value=""><label>Climbing Areas</label>
-        <input id='meteor' type="checkbox" name="" value=""><label>Meteors</label>
+        <div class="col-lg-3 selection">
+            <form class="" action="index.html" method="post">
+              <h3 class='choose'>Choose Your Adventure</h3>
+                <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='currLocBtn'>Use My Location
+                </button>
+                <input type="text" name="zipCode" value="" placeholder="Enter City, State or Zip Code" id='zipInput'>
+                <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='zipBtn'>Search by Zip Code</button><br>
+                <label for="distance">Search Radius:</label>
+                <select name="distance">
+                    <option value="5">5 Miles</option>
+                  <option value="10">10 Miles</option>
+                  <option value="25" selected>25 Miles</option>
+                </select><br><br>
+                <div>
+                  <div>
+              <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt=""><input id='camping' type="checkbox" name="" value="" checked><label>=&nbsp;&nbsp;Camping</label>
+                </div>
+              <div>
+                <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="">
+                <label>=&nbsp;&nbsp;Hiking</label>
+                <input id='hiking' type="checkbox" name="" value="" >
+              </div>
+              <div>
+                <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="">
+                <label>=&nbsp;&nbsp;Mountain Biking</label>
+                <input id='mtnBiking' type="checkbox" name="" value="" >
+              </div>
+              <div>
+                <img src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="">
+                <label>=&nbsp;&nbsp;Climbing</label>
+                <input id='climbing' type="checkbox" name="" value="" >
+              </div>
+              <img src="meteor.png"><input id='meteor' type="checkbox" name="" value=""><label>&nbsp;=&nbsp;&nbsp;Meteors</label>
+                </div>
+            </form>
+        </div>
+        <!--  -->
 
-    </form>
-  </div>
-    <!--  -->
+        <!-- Map -->
+        <div class="col-lg-8">
+            <div id="map"></div>
+        </div>
+        <!--  -->
 
+    </div>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="mastfoot">
+                <div class="inner foot">
+                    <p> &copy; Created by <a href="http://github.com.captnseagraves">Kevin Seagraves</a> 2017</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
 
-    <!-- Google Place Search Box -->
-    <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
-    <!--  -->
-
-    <!-- Google Place auotcomplete and directions -->
-    <!-- <input id="origin-input" class="controls" type="text"
-        placeholder="Enter an origin location">
-
-    <input id="destination-input" class="controls" type="text"
-        placeholder="Enter a destination location">
-
-    <div id="mode-selector" class="controls">
-      <input type="radio" name="type" id="changemode-walking" checked="checked">
-      <label for="changemode-walking">Walking</label>
-
-      <input type="radio" name="type" id="changemode-transit">
-      <label for="changemode-transit">Transit</label>
-
-      <input type="radio" name="type" id="changemode-driving">
-      <label for="changemode-driving">Driving</label>
-    </div> -->
-    <!--  -->
-<!-- <div class="col-lg-9"> -->
-    <!-- Map -->
-    <div class="col-lg-9" id="map"></div>
-
-    <!--  -->
-</div>
-</div>
-</div>
-
+    </div>
+    </div>
 </body>
 
 </html>

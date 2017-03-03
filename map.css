@@ -1,6 +1,8 @@
 #map {
-      height: 1000px;
-      width: 1000px;
+      /*height: 600px;
+      width: 900px;*/
+      width:95%;
+      height:600px;
       margin:auto;
       /*margin-bottom: 20px;*/
      }
@@ -45,10 +47,17 @@
 
 .mapBtns {
   margin: 20px;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 #zipInput {
   color: black;
+  height: 35px;
+  width: 210px;
+  margin: 10px;
+  font-family: 'Open Sans', sans-serif;
+border-radius: 5px;
 }
 
 #loc {
@@ -60,15 +69,6 @@
   margin-right: 5px;
 }
 
-.purp {
-  height: 15px;
-  width: 15px;
-  border: 1px solid black;
-  background-color: purple;
-  display: inline-block;
-position: relative;
-top: 3px;
-}
 
 
 
@@ -106,14 +106,16 @@ body {
   height: 100%;
   background-color: #090412;
 background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
-font-family: 'Goudy Bookletter 1911', serif;
+font-family: 'Open Sans', sans-serif;
 font-size: 1em;
+
+
 
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 2px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -179,8 +181,6 @@ body {
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
-       font-family: 'Molle', cursive;
-       font-size: 2em;
   }
   .masthead-nav {
     float: right;
@@ -218,12 +218,13 @@ body {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
-    top: 0;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*margin-bottom: 15px;*/
   }
   .mastfoot {
-    position: fixed;
-    bottom: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -258,7 +259,46 @@ body {
 
       #camping, #mtnBiking, #hiking, #climbing, #meteor {
         margin-right: 5px;
+        float:right;
       }
+
+
       select {
         color: black;
+        font-family: 'Open Sans', sans-serif;
+
       }
+
+      .selection {
+        background-color: rgba(152, 152, 152, 0.4);
+        padding: 25px;
+        margin: 50px;
+
+      }
+ .row{
+   margin-left: 15px;
+   margin-right: 15px;
+ }
+
+ .head {
+   margin-top: 15px;
+   /*margin-bottom: 5px;*/
+ }
+
+ .AG {
+   padding-left: 15px;
+   padding-top: 20px;
+   font-family: 'Molle', cursive;
+font-size: 3em;
+ }
+
+ .home{
+   align-content: right
+ }
+ .choose {
+   padding-bottom: 10px;
+ }
+
+ .where{
+   float: left;
+ }
