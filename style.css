@@ -117,6 +117,7 @@ body {
 .site-wrapper-inner {
     display: table-cell;
     vertical-align: top;
+    padding-bottom: 50px;
 }
 
 .cover-container {
