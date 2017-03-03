@@ -22,85 +22,80 @@
     <!--  -->
 
     <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">    <!-- my css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- my css -->
     <link rel="stylesheet" href="map.css">
     <!-- <script src="new.js"></script> -->
 </head>
 
 <body>
-<div class="container-fluid">
-
-
-
-    <div class='row'>
-        <div class='col-lg-12 head'>
-            <div class="masthead">
-                <!-- <div class="inner"> -->
+    <div class="container-fluid">
+        <div class='row'>
+            <div class='col-lg-12 head'>
+                <div class="masthead">
                     <h3 class="masthead-brand AG"><a href="index.html">Adventure Guide</a></h3>
-
-                <!-- </div> -->
+                </div>
             </div>
         </div>
-    </div>
-    <!-- User location and Zip code entry -->
-    <div class="row">
-        <div class="col-lg-3 selection">
-            <form class="" action="index.html" method="post">
-              <h3 class='choose'>Choose Your Adventure</h3>
-                <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='currLocBtn'>Use My Location
+        <!-- User location and Zip code entry -->
+        <div class="row">
+            <div class="col-lg-3 selection">
+                <form class="" action="index.html" method="post">
+                    <h3 class='choose'>Choose Your Adventure</h3>
+                    <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='currLocBtn'>Use My Location
                 </button>
-                <input type="text" name="zipCode" value="" placeholder="Enter City, State or Zip Code" id='zipInput'>
-                <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='zipBtn'>Search by Zip Code</button><br>
-                <label for="distance">Search Radius:</label>
-                <select name="distance">
+                    <input type="text" name="zipCode" value="" placeholder="Enter City, State or Zip Code" id='zipInput'>
+                    <button type="button" class="btn btn-default mapBtns" aria-label="Left Align" id='zipBtn'>Search by Zip Code</button><br>
+                    <label for="distance">Search Radius:</label>
+                    <select name="distance">
                     <option value="5">5 Miles</option>
                   <option value="10">10 Miles</option>
                   <option value="25" selected>25 Miles</option>
                 </select><br><br>
-                <div>
-                  <div>
-              <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt=""><input id='camping' type="checkbox" name="" value="" checked><label>=&nbsp;&nbsp;Camping</label>
-                </div>
-              <div>
-                <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="">
-                <label>=&nbsp;&nbsp;Hiking</label>
-                <input id='hiking' type="checkbox" name="" value="" >
-              </div>
-              <div>
-                <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="">
-                <label>=&nbsp;&nbsp;Mountain Biking</label>
-                <input id='mtnBiking' type="checkbox" name="" value="" >
-              </div>
-              <div>
-                <img src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="">
-                <label>=&nbsp;&nbsp;Climbing</label>
-                <input id='climbing' type="checkbox" name="" value="" >
-              </div>
-              <img src="meteor.png"><input id='meteor' type="checkbox" name="" value=""><label>&nbsp;=&nbsp;&nbsp;Meteors</label>
-                </div>
-            </form>
-        </div>
-        <!--  -->
+                <!-- Activity Selection -->
+                    <div>
+                        <div>
+                            <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt=""><input id='camping' type="checkbox" name="" value="" checked><label>=&nbsp;&nbsp;Camping</label>
+                        </div>
+                        <div>
+                            <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="">
+                            <label>=&nbsp;&nbsp;Hiking</label>
+                            <input id='hiking' type="checkbox" name="" value="">
+                        </div>
+                        <div>
+                            <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="">
+                            <label>=&nbsp;&nbsp;Mountain Biking</label>
+                            <input id='mtnBiking' type="checkbox" name="" value="">
+                        </div>
+                        <div>
+                            <img src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="">
+                            <label>=&nbsp;&nbsp;Climbing</label>
+                            <input id='climbing' type="checkbox" name="" value="">
+                        </div>
+                        <img src="meteor.png"><input id='meteor' type="checkbox" name="" value=""><label>&nbsp;=&nbsp;&nbsp;Meteors</label>
+                    </div>
+                </form>
+            </div>
+            <!--  -->
 
-        <!-- Map -->
-        <div class="col-lg-8">
-            <div id="map"></div>
-        </div>
-        <!--  -->
+            <!-- Map -->
+            <div class="col-lg-8">
+                <div id="map"></div>
+            </div>
+            <!--  -->
 
-    </div>
-    <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-            <div class="mastfoot">
-                <div class="inner foot">
-                    <p> &copy; Created by <a href="http://github.com.captnseagraves">Kevin Seagraves</a> 2017</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="mastfoot">
+                    <div class="inner foot">
+                        <p> &copy; Created by <a href="http://github.com.captnseagraves">Kevin Seagraves</a> 2017</p>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-3"></div>
         </div>
-        <div class="col-lg-3"></div>
-
-    </div>
     </div>
 </body>
 
