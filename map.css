@@ -1,10 +1,7 @@
 #map {
-      /*height: 600px;
-      width: 900px;*/
       width:95%;
       height:600px;
       margin:auto;
-      /*margin-bottom: 20px;*/
      }
 
 .mainBody{
@@ -20,29 +17,10 @@
   border: none;
 }
 
-#logo {
-    color: white;
-    margin-left: 100px;
-    margin-top: 30px;
-    font-size: 3em;
-}
 .navInput {
   background: none;
   border: 2px solid white;
   color: white;
-}
-#navForm {
-      margin-right: 100px;
-      margin-top: 30px;
-}
-
-#freedom {
-  background: none;
-  transition: all 3s ease;
-}
-#freedom:hover {
-  background-color: #fff;
-  color: #000;
 }
 
 .mapBtns {
@@ -68,9 +46,6 @@ border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
 }
-
-
-
 
 /* copy pasted bootstrap code*/
 
@@ -250,40 +225,35 @@ body {
 
 
 
-      /* personal styles, cascaded*/
+/* personal styles, cascaded*/
 
-      .info_content{
-        color: black;
-        text-shadow: none;
-      }
+.info_content{
+  color: black;
+  text-shadow: none;
+}
 
-      #camping, #mtnBiking, #hiking, #climbing, #meteor {
-        margin-right: 5px;
-        float:right;
-      }
+#camping, #mtnBiking, #hiking, #climbing, #meteor {
+  margin-right: 5px;
+  float:right;
+}
 
+select {
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
 
-      select {
-        color: black;
-        font-family: 'Open Sans', sans-serif;
+.selection {
+  background-color: rgba(152, 152, 152, 0.4);
+  padding: 25px;
+  margin: 50px;
+  }
 
-      }
-
-      .selection {
-        background-color: rgba(152, 152, 152, 0.4);
-        padding: 25px;
-        margin: 50px;
-
-      }
  .row{
    margin-left: 15px;
    margin-right: 15px;
  }
 
- .head {
-   margin-top: 15px;
-   /*margin-bottom: 5px;*/
- }
+
 
  .AG {
    padding-left: 15px;

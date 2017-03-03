@@ -1,75 +1,61 @@
 #map {
-      height: 1000px;
-      width: 1000px;
-      margin:auto;
-      /*margin-bottom: 20px;*/
-     }
+    height: 1000px;
+    width: 1000px;
+    margin: auto;
+    /*margin-bottom: 20px;*/
+}
 
-.mainBody{
-  background: url('forrest-cavale-1739.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.mainBody {
+    background: url('forrest-cavale-1739.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .navbar {
-  background: none;
-  border: none;
+    background: none;
+    border: none;
 }
 
-#logo {
-    color: white;
-    margin-left: 100px;
-    margin-top: 30px;
-    font-size: 3em;
-}
+
 .navInput {
-  background: none;
-  border: 2px solid white;
-  color: white;
+    background: none;
+    border: 2px solid white;
+    color: white;
 }
+
 #navForm {
-      margin-right: 100px;
-      margin-top: 30px;
+    margin-right: 100px;
+    margin-top: 30px;
 }
 
 #freedom {
-  background: none;
-  transition: all 3s ease;
+    background: none;
+    transition: all 3s ease;
 }
+
 #freedom:hover {
-  background-color: #fff;
-  color: #000;
+    background-color: #fff;
+    color: #000;
 }
 
 .mapBtns {
-  margin: 20px;
+    margin: 20px;
 }
 
 #zipInput {
-  color: black;
+    color: black;
 }
 
 #loc {
-  padding-top: 100px;
+    padding-top: 100px;
 }
 
 .equal {
-  margin-left: 5px;
-  margin-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
-
-.purp {
-  height: 15px;
-  width: 15px;
-  border: 1px solid black;
-  background-color: purple;
-  display: inline-block;
-position: relative;
-top: 3px;
-}
-
 
 
 /* copy pasted bootstrap code*/
@@ -78,21 +64,22 @@ top: 3px;
  * Globals
  */
 
+
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
+
+a, a:focus, a:hover {
+    color: #fff;
 }
 
+
 /* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+
+.btn-default, .btn-default:hover, .btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
 }
 
 
@@ -100,91 +87,99 @@ a:hover {
  * Base structure
  */
 
-
-html,
-body {
-  height: 100%;
-  background-color: #090412;
-background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
-font-family: 'Goudy Bookletter 1911', serif;
-font-size: 1em;
-
+html, body {
+    height: 100%;
+    background-color: #090412;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 1em;
 }
+
 body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
+
 .site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
+    display: table;
+    width: 100%;
+    height: 100%;
+    /* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
 }
 
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 /* Padding for spacing */
+
 .inner {
-  padding: 30px;
+    padding: 30px;
 }
 
 
 /*
  * Header
  */
+
 .masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.masthead-nav > li {
-  display: inline-block;
+.masthead-nav>li {
+    display: inline-block;
 }
-.masthead-nav > li + li {
-  margin-left: 20px;
+
+.masthead-nav>li+li {
+    margin-left: 20px;
 }
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+
+.masthead-nav>li>a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    /* IE8 proofing */
+    color: rgba(255, 255, 255, .75);
+    border-bottom: 2px solid transparent;
 }
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
+
+.masthead-nav>li>a:hover, .masthead-nav>li>a:focus {
+    background-color: transparent;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255, 255, 255, .25);
 }
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
+
+.masthead-nav>.active>a, .masthead-nav>.active>a:hover, .masthead-nav>.active>a:focus {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
 @media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-       font-family: 'Molle', cursive;
-       font-size: 2em;
-  }
-  .masthead-nav {
-    float: right;
-  }
+    .masthead-brand {
+        float: left;
+        font-family: 'Molle', cursive;
+        font-size: 2em;
+    }
+    .masthead-nav {
+        float: right;
+    }
 }
 
 
@@ -193,11 +188,12 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
+    padding: 0 20px;
 }
+
 .cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
 
@@ -206,8 +202,9 @@ body {
  */
 
 .mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+    color: #999;
+    /* IE8 proofing */
+    color: rgba(255, 255, 255, .5);
 }
 
 
@@ -216,49 +213,44 @@ body {
  */
 
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead, .mastfoot, .cover-container {
+        width: 100%;
+        /* Must be percentage or pixels for horizontal alignment */
+    }
 }
 
 @media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
+    .masthead, .mastfoot, .cover-container {
+        width: 700px;
+    }
 }
 
 
+/* personal styles, cascaded*/
 
+.info_content {
+    color: black;
+    text-shadow: none;
+}
 
+#camping, #mtnBiking, #hiking, #climbing, #meteor {
+    margin-right: 5px;
+}
 
-      /* personal styles, cascaded*/
-
-      .info_content{
-        color: black;
-        text-shadow: none;
-      }
-
-      #camping, #mtnBiking, #hiking, #climbing, #meteor {
-        margin-right: 5px;
-      }
-      select {
-        color: black;
-      }
+select {
+    color: black;
+}
