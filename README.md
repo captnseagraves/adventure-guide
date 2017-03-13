@@ -2,7 +2,7 @@ Adventure Guide
 
 Everyone loves to adventure. Adventure Guide provides a map to where you can do outdoor activities near a location of your choosing.
 
-Check out a walkthrough of our app here:
+Check out a walkthrough of our app here: https://www.youtube.com/watch?v=YrO7-P8POKg&feature=youtu.be
 
 Our current deployed version is here: http://captnseagraves-adventure-guide.surge.sh/
 
@@ -11,7 +11,9 @@ The Adventure Guide App maps out where users can do outdoor activities. Upon vis
 
 Technologies Used
 
-HTML, CSS, Jquery
+HTML, CSS, JavaScript
+
+Frameworks: Bootstrap, Jquery
 
 Recreation Information Database API: Used to get federal recreation data
 ZipCode API: Used to get zip codes and coordinates
